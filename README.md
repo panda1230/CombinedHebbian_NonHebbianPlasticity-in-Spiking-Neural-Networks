@@ -1,5 +1,5 @@
 # Combined_Hebbian_NonHebbian_Plasticity for Recognition
-The code provided here uses the Brian simulator (http://briansimulator.org/). This code requires brian installation. 
+The code provided here uses the Brian simulator (http://briansimulator.org/). This code requires brian installation (http://brian2.readthedocs.io/en/stable/introduction/install.html). 
 This code pertains to the recent Frontiers article 'Learning to Generate Sequences with Combination of Hebbian and Non-hebbian Plasticity in Recurrent Spiking Neural Networks' https://www.frontiersin.org/articles/10.3389/fnins.2017.00693/full. This paper discusses an effective approach to generate simple words using a spiking reservoir (without output or readout neurons) using a combination of Hebbian STDP and non-Hebbian weight decay based learning of recurrent connections within the reservoir. The code provided here uses a similar spiking reservoir topology and combined plasticity learning rule to classify different characters (for character recognition using a simple synthesized training data of 800 examples of 7 different characters'C', 'R', 'O', 'T', 'F', 'A' taken from char74). 
 
 Testing with pretrained weights:
