@@ -6,7 +6,7 @@ Testing with pretrained weights:
 First run the main file "recurrent_snn9_withdecay.py" (which by default uses the pretrained weights) and wait until the simulation is finished to get the classification accuracy.
 
 Training a new network:
-At first, run the "SNN_random_conn_generator_dbg1.py". It ll randomly initialize the weights of the network and store in the random folder. Then run "recurrent_snn9_withdecay.py" by changing line 506 to "test_mode = False" to train the network.
+At first, run the "Reservoir_conn_generator.py". It ll randomly initialize the weights of the network and store in the random folder. Then run "recurrent_snn9_withdecay.py" by changing line 506 to "test_mode = False" to train the network.
 
 Note:
 In this simple demo the performance is evaluated using spiking rate of the excitatory neurons in the reservoir to make neuron assignments on the training set as described in https://www.frontiersin.org/articles/10.3389/fnins.2017.00693/full.
