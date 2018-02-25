@@ -4,10 +4,12 @@ The code provided here uses the Brian simulator (http://briansimulator.org/). Th
 This code pertains to the recent Frontiers article:
 '**Learning to Generate Sequences with Combination of Hebbian and Non-hebbian Plasticity in Recurrent Spiking Neural Networks- Priyadarshini Panda and Kaushik Roy' https://www.frontiersin.org/articles/10.3389/fnins.2017.00693/full**. 
 
-This paper discusses an effective approach to generate simple words using a spiking reservoir (without output or readout neurons) using a combination of Hebbian STDP and non-Hebbian weight decay based learning of recurrent connections within the reservoir. The code provided here uses a similar spiking reservoir topology and combined plasticity learning rule to classify different characters (for character recognition using a simple synthesized training data of 800 examples of 7 different characters'C', 'R', 'O', 'T', 'F', 'A' taken from char74). 
+This paper discusses an effective approach to generate simple words using a spiking reservoir (without output or readout neurons) using a combination of Hebbian STDP and non-Hebbian weight decay based learning of recurrent connections within the reservoir. The code provided here uses a similar spiking reservoir topology and combined plasticity learning rule to classify different characters (for character recognition using a simple synthesized training data of 800 examples of 7 different characters'C', 'R', 'O', 'T', 'F', 'A' taken from char74).
+
+Please mention the full path to the directory (where the 'data/' folder resides) in line 46 in "recurrent_snn9_withdecay.py".
 
 **Testing with pretrained weights:**
-First run the main file "recurrent_snn9_withdecay.py" (which by default uses the pretrained weights) and wait until the simulation is finished to get the classification accuracy.
+First run the main file "recurrent_snn9_withdecay.py" (which by default uses the pretrained weights/assignments from the weights folder) and wait until the simulation is finished to get the classification accuracy. 
 
 **Training a new network:**
 At first, run the "Reservoir_conn_generator.py". It ll randomly initialize the weights of the network and store in the random folder. Then run "recurrent_snn9_withdecay.py" by changing line 506 to "test_mode = False" to train the network.
