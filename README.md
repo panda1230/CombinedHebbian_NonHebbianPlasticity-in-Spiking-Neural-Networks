@@ -18,3 +18,5 @@ At first, run the "Reservoir_conn_generator.py". It ll randomly initialize the w
 In this simple demo the performance is evaluated using spiking rate of the excitatory neurons in the reservoir to make neuron assignments on the training set as described in https://www.frontiersin.org/articles/10.3389/fnins.2017.00693/full.
 
 While we don't utilize the readout layer, the code does provide avenues to initialize and train the readout layer. You can do the same by changing line 507 to "tag_mode=True". However, as explained in the paper above, using STDP from input to reservoir and STDP + non-Hebbian decay for E-E connections within the reservoir is sufficient for training and classification. Thus, it is recommended to always keep tag_mode = False in both training and testing. 
+
+While the current code utilizes a simple synthesized dataset, one can test it on MNIST and more widespread recognition datasets.
