@@ -1,1 +1,1 @@
-# STDP_MNIST_EnsembleSNN
+# Combined_Hebbian_NonHebbian_Plasticity for Recognition
