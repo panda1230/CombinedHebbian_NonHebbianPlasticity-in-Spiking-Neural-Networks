@@ -1,4 +1,4 @@
-# Combined_Hebbian_NonHebbian_Plasticity for Recognition
+# Combined Hebbian/Non-Hebbian Plasticity for Recognition in Recurrent Spiking Neural Networks
 The code provided here uses the Brian simulator (http://briansimulator.org/). This code requires brian installation (http://brian2.readthedocs.io/en/stable/introduction/install.html). 
 
 This code pertains to the recent Frontiers article:
