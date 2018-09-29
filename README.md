@@ -20,3 +20,6 @@ In this simple demo the performance is evaluated using spiking rate of the excit
 While we don't utilize the readout layer, the code does provide avenues to initialize and train the readout layer. You can do the same by changing line 507 to "tag_mode=True". However, as explained in the paper above, using STDP from input to reservoir and STDP + non-Hebbian decay for E-E connections within the reservoir is sufficient for training and classification. Thus, it is recommended to always keep tag_mode = False in both training and testing. 
 
 While the current code utilizes a simple synthesized dataset, one can test it on MNIST and more complex recognition datasets.
+
+**To cite this work, please use the following format:**
+Panda, Priyadarshini, and Kaushik Roy. "Learning to generate sequences with combination of Hebbian and non-hebbian plasticity in recurrent spiking neural networks." Frontiers in neuroscience 11 (2017): 693.
