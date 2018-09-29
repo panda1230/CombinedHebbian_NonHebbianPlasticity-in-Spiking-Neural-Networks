@@ -452,11 +452,11 @@ for opt,arg in opts:
 
 if(stoc_enable):
    print '------------------------------------------------------------------------'
-   print 'Synapses connecting liquid and output-excitatory neurons are STOCHASTIC!'
+   print 'Synapses connecting liquid and output-excitatory neurons are NOT LEARNT!'
    print '------------------------------------------------------------------------'
 else:
    print '----------------------------------------------------------------------------'
-   print 'Synapses connecting liquid and output-excitatory neurons are NOT STOCHASTIC!'
+   print 'Synapses connecting liquid and output-excitatory neurons are LEARNT!'
    print '----------------------------------------------------------------------------'
 
 #--------------------------------------------------------------------------
@@ -660,9 +660,7 @@ if(stoc_enable == 0):
    eqs_stdp_post_le = 'w += (nu_post_le * (pre - STDP_offset_le) * ((wmax_xele - w)**exp_post_le)); post += 1.'
    eqs_stdp_lele = eqs_stdp_post_le
    eqs_stdp_lile = 'w += (-nu_post_le * (pre - STDP_offset_le) * ((wmax_xele - w)**exp_post_le)); post += 1.'
-else:
-   eqs_stdp_pre_xe  = 'w -= ((post>rand(' + str(n_liquid_e) + '))*1.0); pre = pre_rst_xe'
-   eqs_stdp_post_le = 'w += ((pre>rand(' + str(n_input) + '))*1.0); post = post_rst_le'
+
 
 #--------------------------------------------------------------------------
 # LIF output-excitatory neuron
@@ -719,14 +717,14 @@ neuron_eqs_i = '''
 #--------------------------------------------------------------------------
 # Implement STDP for synapses connecting the liquid and output-excitatory neurons
 #--------------------------------------------------------------------------
-# Stochastic-STDP potentiation
+# STDP potentiation
 tc_pre_ee   = 20*b.ms
 pre_rst     = 0.005
 nu_ee_post  = pre_rst
 exp_ee_post = 0.9
 STDP_offset = 0.4
 
-# Stochastic-STDP depression
+# STDP depression
 tc_post_1_ee = 20*b.ms
 post_rst     = 0.005
 
